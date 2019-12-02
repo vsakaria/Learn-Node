@@ -4,10 +4,8 @@ const router = express.Router();
 // Do work here
 router.get("/", (req, res) => {
   const { name, age, cool } = req.query;
-  const vishal = { name, age, cool };
-  // res.send("Hey! It works!");
-
-  res.json(vishal);
+  const response = { name, age, cool };
+  res.json(response);
 });
 
 module.exports = router;
