@@ -8,4 +8,10 @@ router.get("/", (req, res) => {
   res.json(response);
 });
 
+router.get("/reverse/:name", (req, res) => {
+  const { name } = req.params;
+  const response = [...name].reverse().join("");
+  res.json(response);
+});
+
 module.exports = router;
